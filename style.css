@@ -1,0 +1,465 @@
+
+
+.fake-videolink{
+    position: relative;
+    overflow: hidden;
+}
+.fake-videolink .vid-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fake-videolink .vid-overlay .btn{
+    width: 92px;
+    height: 65px;
+    background: url(play.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: up-down 2s infinite;
+}
+
+@keyframes up-down{
+    0%{transform: translateY(6px);}
+    50%{transform: translateY(0);}
+    100%{transform: translateY(6px);}
+}
+
+.rate-converter{
+    text-align: center;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 8px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    margin: 0 auto;
+    width: 280px;
+
+    background: #f09819 linear-gradient(45deg,#ff5858 0%,#f09819 100%);
+    color:white;
+    margin-bottom: 28px;
+}
+
+.rate-converter .header-rate {
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.rate-converter .converter {
+    color: #fbdf09;
+    font-size: 16px;
+    /* background: #e8e8e8; */
+    border: 1px white solid;
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 27px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.rate-converter .web-author {
+    font-size: 9px;
+}
+
+.rate-converter hr{    border-style: dotted;
+    border-color: #f1941d;}
+
+
+blockquote .author-image {
+    float: right;
+    width: 120px;
+    margin-left: 14px;
+    margin-bottom: 14px;
+}
+
+blockquote .author-image .capture{
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    font-family: 'Arial';
+    color: #616161;
+    padding: 4px;
+}
+
+.forbes-quote{
+    background: #f1f1f1;
+}
+
+.forbes-quote .forbes{
+    width: 112px;
+    height: 25px;
+    background: url(forbes.svg);
+    background-position: center;
+    background-size: 80% auto;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: -14px;
+    background-color: black;
+    left: 22px;
+}
+
+.fs-article blockquote {
+    position: relative;
+    padding: 15px;
+    padding-top: 1.75em;
+    padding-left: 1.75em;
+}
+.fs-article blockquote:before {
+    position: absolute;
+    top: 60px;
+    left: 7px;
+    content: "\201C";
+    color: #B3B3B3;
+    font-size: 45px;
+    display: inline-block;
+    line-height: 0;
+    
+}
+.action-bar{
+    display: flex;
+    background: #f1f1f1;
+    padding: 8px;
+    margin: 35px 0;
+}
+
+
+.action-bar .yuan-button{
+    width: 200px;
+    min-height: 30px;
+    background: url(../images/yuanlogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.action-bar .yuan-button .of-partner{
+    position: absolute;
+    bottom: -25px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: 'Arial';
+    padding: 0 4px;
+    background: #499d5b;
+    color: white;
+    line-height: 21px;
+}
+.action-bar .yuan-button .of-partner.v2{
+    background: orange;
+    left: 86%;
+    bottom: -17%;
+    z-index: 9;
+}
+.action-bar .yuan-text{
+    background: #ff5858;
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 9px 28px;
+    flex-grow: 1;
+    margin-left: 11px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+
+
+}
+
+.action-bar .yuan-text:before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: #f1f1f1;
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: rotate(45deg) translateY(-20px);
+    animation: appearleft 1s infinite;
+}
+.action-bar .yuan-text:after{
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: #f1f1f1;
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: rotate(45deg) translateY(-20px);
+    animation: appearleftrev 1s infinite;
+}
+.action-bar .yuan-text .wanna-blink{     display: block;   }
+
+
+.action-bar:hover .yuan-text{
+    animation: none;
+    text-decoration: none !important;
+    transform: scale(1.05);
+}
+
+.action-bar .yuan-text .wanna-blink{
+    animation: blink 2s  infinite;
+    animation-timing-function: step-start;
+    text-decoration: none !important;
+}
+
+.action-bar:hover .yuan-text .wanna-blink{
+    text-decoration: none;
+    animation:none;
+}
+
+
+@keyframes blink{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes appearleft{
+    0%{left:-50px ;opacity: 1;}
+    50%{left:-28px ;opacity: 0;}
+    100%{left:-50px ;opacity: 1;}
+}
+
+@keyframes appearleftrev{
+    0%{left:-28px ;opacity: 1;}
+    50%{left:-50px;opacity: 0;}
+    100%{left:-28px;opacity: 1;}
+}
+
+.has-mv{
+    position: relative;
+    overflow: hidden;
+}
+
+.has-mv .mv-date {
+    position: absolute;
+    color: red;
+    bottom: 3.8%;
+    left: 28.3%;
+    display: block;
+    width: 100%;
+    height: 10.5%;
+    font-family: Arial;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.header__icon--forbes-logo[_ngcontent-c3] .fs-icon--forbes-logo {
+    height: 37px;
+    width: 132px;
+}
+
+
+.cur-conv{
+    margin: 18px auto;
+    display: table;
+    text-align: center;
+    font-family: 'Arial';
+    font-size: 14px;
+    line-height: 1.2;
+    color: #ffd70f;
+    max-width: 360px;
+    /* margin: 0 auto; */
+    background: #2e4369;
+    padding: 14px 32px;
+    border-radius: 24px;
+    border: 1px solid #4f72b0;
+    /* box-shadow: 0 0 8px #131b29; */
+}
+.article-container[_ngcontent-c17] div[_ngcontent-c17] .right-top-img {
+    float: right;
+    width: 120px;
+    margin: 17px 0;
+    padding: 6px;
+}
+
+.excl {
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    background: #3e68b2;
+    display: inline-block;
+}
+
+.steps{
+    text-align:center;
+}
+
+.steps .step{
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid #efefef;
+    padding: 14px;
+}
+.steps img{
+    max-width:80%;
+    border: 4px solid orange;
+    margin:0 auto;
+    max-width:320px;
+}
+
+.steps h3{
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+.steps h3 p {
+    font-weight: bold;
+    color: #09152f;
+}
+
+
+.converter-wrapper{
+    background: #24334f;
+    padding: 14px;
+}
+.converter{
+    text-align: center;
+    font-family: Averta,"Avenir W02",Avenir,Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #2e4369;
+    max-width: 360px;
+    margin: 0 auto;
+    background: #2e4369;
+    padding: 14px;
+    border: 1px solid #4f72b0;
+    box-shadow: 0 0 8px #131b29;
+}
+
+.converter .con-header{
+    font-size: 22px;
+    color: #fb7f01;
+    font-weight: normal;
+    text-transform: uppercase
+}
+
+.converter .con-data{
+    display: inline-block;
+    padding: 12px;
+    background: #415d90;
+    color: white;
+    border-radius: 25px;
+    margin-top: 14px;
+    font-weight: normal;
+}
+
+.converter .cur{
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.converter .cur-to{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #00e100;
+}
+
+.converter .cur-del{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #fff;
+    margin: 0 6px;
+}
+
+.converter .con-note{
+    color: #9ba5b8;
+    font-weight: normal;
+    font-size:12px;
+    margin-top:8px;
+    }
+
+    .fake-videolink {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .fake-videolink .vid-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fake-videolink .vid-overlay .butn {
+        width: 92px;
+        height: 65px;
+        background: url(play_1.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: up-down 2s infinite;
+    }
+
+    .fake-videolink img{
+        max-width: 100%;
+    }
+
+@media (max-width:768px){
+    h1.fs-headline[_ngcontent-c14]{
+        color: #333;
+        font: 700 1.375rem/1.5 Merriweather,serif;
+        letter-spacing: -.1px;
+    }
+    .article-container p {
+        margin: .75rem 0;
+        padding: 0;
+    }
+    .article-container {
+        color: #333;
+        font: normal normal 1rem/1.63 tabular-numbers,Georgia,"Droid Serif",Times New Roman,Times,serif;
+        font-stretch: normal;
+        padding-bottom: 1.5rem;
+        z-index: 10;
+    }
+    .body-container[_ngcontent-c11] {
+         margin: 0;
+    }
+    .fs-article:not(.fs-premium) h2 {
+        color: #333;
+        font-family: "Merriweather", serif;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 26px;
+    }
+
+    .action-bar .yuan-button .of-partner{
+        top:0;
+        bottom: inherit;
+        right: -7px;
+    }
+
+    .action-bar .yuan-button .of-partner.v2{
+        top:0;
+        bottom: inherit;
+        right: 0;
+        left:inherit;
+    }
+
+    .action-bar{
+        flex-direction: column;
+    }
+    .action-bar .yuan-text{
+        margin:0;
+    }
+    .action-bar .yuan-button{
+        background-image: url(../images/yuanlogo-m.png);
+        margin: 12px 0;
+        width: 100%;
+        height: 72px;
+    }
+
+    .fs-article blockquote:before {
+        top: 53px;
+        
+    }
+}
